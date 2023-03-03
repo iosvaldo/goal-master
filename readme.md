@@ -1,1 +1,1 @@
-# Mern todo app
+# Mern app
