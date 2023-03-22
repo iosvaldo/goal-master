@@ -1,5 +1,5 @@
 {
-  "name": "mern-tutorial",
+  "name": "mern-project",
   "version": "1.0.0",
   "description": "goal-app",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iosvaldo/mern-tutorial.git"
+    "url": "git+https://github.com/iosvaldo/mern-project.git"
   },
   "author": "iosvaldo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iosvaldo/mern-tutorial/issues"
+    "url": "https://github.com/iosvaldo/mern-project/issues"
   },
-  "homepage": "https://github.com/iosvaldo/mern-tutorial#readme",
+  "homepage": "https://github.com/iosvaldo/mern-project#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",
