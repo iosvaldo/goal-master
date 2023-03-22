@@ -1,8 +1,12 @@
 const express = require("express"); // handle api
+const colors = require('colors');
 const dotenv = require("dotenv").config(); // handle api
 const { errorHandler } = require('./middleware/errorMiddleware')
+const connectDB = require('./config/db')
 const port = process.env.PORT || 5000;
-// const mongoose = require('mongoose'); //handle database
+
+connectDB();
+
 
 const app = express(); // creating an express application
 
