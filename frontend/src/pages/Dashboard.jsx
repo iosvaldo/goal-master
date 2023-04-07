@@ -41,16 +41,16 @@ function Dashboard() {
 
   return (
     <>
-      <section className="heading">
-        <h1>Welcome {user && user.name}</h1>
-        <p>Goals Dashboard</p>
+      <section className="text-2xl font-bold mb-12 px-5 py-0">
+        <h1 className="mb-2">Welcome {user && user.name}</h1>
+        <p className="text-[#5b5152]">Goals Dashboard</p>
       </section>
 
       <GoalForm />
 
-      <section className="content">
+      <section className="w-[70%] m-auto">
         {goals.length > 0 ? (
-          <div className="goals">
+          <div className="grid gap-4 lg:grid-row-2 2xl:grid-row-3 lg:grid-cols-2 2xl:grid-cols-3 overflow-y-auto mt-10 max-h-[500px]  ">
             {goals.map((goal) => (
               <GoalItem key={goal._id} goal={goal} />
             ))}

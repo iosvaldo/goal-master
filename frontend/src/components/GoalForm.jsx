@@ -15,11 +15,14 @@ function GoalForm() {
   };
 
   return (
-    <section className="form">
+    <section className="w-[70%] my-0 mx-auto">
       <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="text">Enter your Goal</label>
+        <div className=" mb-3">
+          <label className="text-left block mb-1 ml-1 mt-0 mr-0" htmlFor="text">
+            Enter your Goal
+          </label>
           <input
+            className="w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
             type="text"
             name="text"
             id="text"
@@ -28,8 +31,8 @@ function GoalForm() {
             onChange={(e) => setText(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <button className="btn btn-block" type="submit">
+        <div className=" mb-3 ">
+          <button className="btn w-full mb-5" type="submit">
             Add Goal
           </button>
         </div>

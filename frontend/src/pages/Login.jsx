@@ -12,13 +12,13 @@ function Login() {
     password: "",
   });
 
-  const { email, password } = formData
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const { email, password } = formData;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
-  )
+  );
 
   useEffect(() => {
     if (isError) {
@@ -26,18 +26,18 @@ function Login() {
     }
 
     if (isSuccess || user) {
-      navigate("/")
+      navigate("/");
     }
 
     dispatch(reset());
-  }, [user, isError, isSuccess, message, navigate, dispatch])
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -45,30 +45,30 @@ function Login() {
     const userData = {
       email,
       password,
-    }
+    };
 
     dispatch(login(userData));
-  }
+  };
 
   if (isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   return (
     <>
-      <section className="heading">
-        <h1>
+      <section className="text-2xl font-bold mb-12 px-5 py-0">
+        <h1 className="mb-2">
           <FaSignInAlt /> Login
         </h1>
-        <p>Login and start setting goals</p>
+        <p className="text-[#5b5152]">Login and start setting goals</p>
       </section>
 
-      <section className="form">
+      <section className="w-[70%] my-0 mx-auto">
         <form onSubmit={onSubmit}>
-          <div className="form-group">
+          <div className="mb-3">
             <input
               type="email"
-              className="form-control"
+              className="form-control w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
               id="email"
               name="email"
               value={email}
@@ -76,10 +76,10 @@ function Login() {
               onChange={onChange}
             />
           </div>
-          <div className="form-group">
+          <div className="mb-3">
             <input
               type="password"
-              className="form-control"
+              className="form-control w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
               id="password"
               name="password"
               value={password}
@@ -88,15 +88,15 @@ function Login() {
             />
           </div>
 
-          <div className="form-group">
-            <button type="submit" className="btn btn-block">
+          <div className="mb-3">
+            <button type="submit" className="btn w-full mb-5">
               Submit
             </button>
           </div>
         </form>
       </section>
     </>
-  )
+  );
 }
 
 export default Login;

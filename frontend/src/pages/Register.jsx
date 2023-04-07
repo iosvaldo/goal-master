@@ -29,21 +29,21 @@ function Register() {
     }
 
     if (isSuccess || user) {
-      navigate("/")
+      navigate("/");
     }
 
     dispatch(reset());
-  }, [user, isError, isSuccess, message, navigate, dispatch])
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (password !== password2) {
       toast.error("Passwords do not match");
@@ -52,31 +52,31 @@ function Register() {
         name,
         email,
         password,
-      }
+      };
 
-      dispatch(register(userData))
+      dispatch(register(userData));
     }
-  }
+  };
 
   if (isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   return (
     <>
-      <section className="heading">
-        <h1>
+      <section className="text-2xl font-bold mb-12 px-5 py-0">
+        <h1 className="mb-2">
           <FaUser /> Register
         </h1>
-        <p>Please create an account</p>
+        <p className="text-[#5b5152]">Please create an account</p>
       </section>
 
-      <section className="form">
+      <section className="w-[70%] my-0 mx-auto">
         <form onSubmit={onSubmit}>
-          <div className="form-group">
+          <div className="mb-3">
             <input
               type="text"
-              className="form-control"
+              className="w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
               id="name"
               name="name"
               value={name}
@@ -84,10 +84,10 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className="form-group">
+          <div className="mb-3">
             <input
               type="email"
-              className="form-control"
+              className="w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
               id="email"
               name="email"
               value={email}
@@ -95,10 +95,10 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className="form-group">
+          <div className="mb-3">
             <input
               type="password"
-              className="form-control"
+              className="w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
               id="password"
               name="password"
               value={password}
@@ -106,10 +106,10 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className="form-group">
+          <div className="mb-3">
             <input
               type="password"
-              className="form-control"
+              className="w-[100%] p-3 border border-solid border-[#e6e6e6] rounded mb-2.5"
               id="password2"
               name="password2"
               value={password2}
@@ -117,8 +117,8 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className="form-group">
-            <button type="submit" className="btn btn-block">
+          <div className="mb-3">
+            <button type="submit" className="btn w-full mb-5 hover:scale-95">
               Submit
             </button>
           </div>
