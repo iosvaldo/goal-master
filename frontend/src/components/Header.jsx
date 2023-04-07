@@ -34,13 +34,13 @@ function Header() {
           </li>
         ) : (
           <>
-            <li>
-              <Link className="active flex item-center " to="/login">
+            <li className="active flex item-center mr-2">
+              <Link to="/login">
                 <FaSignInAlt className="svg-icon" /> Login
               </Link>
             </li>
-            <li>
-              <Link className="active flex item-center" to="/register">
+            <li className="active flex item-center">
+              <Link to="/register">
                 <FaUser className="svg-icon" /> Register
               </Link>
             </li>
