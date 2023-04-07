@@ -9,10 +9,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="lg:max-h-full ">
       <Router>
-        <div className="container">
-          <Header />
+        <div className="max-w-[960px] 2xl:w-4xl my-0 mx-auto py-0 px-5 text-center">
+          <Header/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
@@ -22,7 +22,7 @@ function App() {
       </Router>
       <Footer />
       <ToastContainer />
-    </>
+    </div>
   );
 }
 

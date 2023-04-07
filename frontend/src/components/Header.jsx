@@ -16,20 +16,18 @@ function Header() {
   };
 
   return (
-    <header className="header">
-      <div className="logo">
+    <header className="flex justify-between items-center py-5 px-0 border-b border-solid border-[#e6e6e6] mb-14 max-sm:flex-col max-sm:justify-between">
+      <div className="m-2">
         <Link to="/">
-          <img src={logo} alt="app_logo" style={{ height: "3em" }} />
+          <h1>GoalMaster</h1>
         </Link>
       </div>
-      <div style={{ display: "flex", textAlign: "center" }}>
-        <h1 style={{ marginBottom: "0" }}>
-          GoalMaster
-        </h1>
+      <div clasName="m-2">
+        <img src={logo} alt="app_logo" className="h-12" />
       </div>
-      <ul>
+      <ul className=" m-2 flex item-center justify-between">
         {user ? (
-          <li>
+          <li className="m-auto">
             <button className="btn" onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
@@ -37,13 +35,13 @@ function Header() {
         ) : (
           <>
             <li>
-              <Link to="/login">
-                <FaSignInAlt /> Login
+              <Link className="active flex item-center " to="/login">
+                <FaSignInAlt className="svg-icon" /> Login
               </Link>
             </li>
             <li>
-              <Link to="/register">
-                <FaUser /> Register
+              <Link className="active flex item-center" to="/register">
+                <FaUser className="svg-icon" /> Register
               </Link>
             </li>
           </>
