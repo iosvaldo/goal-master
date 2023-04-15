@@ -11,7 +11,7 @@ const GoalItem = memo(({ goal }) => {
   }, 600);
 
   return (
-    <div className="bg-[#f4f4f4] hover:shadow-md my-2.5 mx-0 px-4 pt-5 px-0 pb-2 relative shadow rounded-2xl ">
+    <div className="bg-[#f4f4f4] hover:shadow-md my-2.5 mx-0 px-4 pt-5 pb-2 relative shadow rounded-2xl ">
       <div>{new Date(goal.createdAt).toLocaleString("en-US")}</div>
       <h2 >{goal.text}</h2>
       <button
