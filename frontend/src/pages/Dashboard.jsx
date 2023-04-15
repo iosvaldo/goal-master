@@ -43,7 +43,7 @@ function Dashboard() {
     <>
       <section className="text-2xl font-bold mb-12 px-5 py-0">
         <h1 className="mb-2">Welcome {user && user.name}</h1>
-        <p className="text-[#5b5152]">Goals Dashboard</p>
+        <p className="text-[#17301b]">Goals Dashboard</p>
       </section>
 
       <GoalForm />
